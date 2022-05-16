@@ -4,14 +4,14 @@ import java.util.TimerTask;
 
 public class Vclock extends Timer {
 
-    private ArrayList<Vcpu> vcpulist;
+    private ArrayList<Synchronizable> slist;
 
     public Vclock(){
-        vcpulist = new ArrayList<Vcpu>();
+        slist = new ArrayList<Synchronizable>();
     }
 
-    public void register(Vcpu vcpu){
-        vcpulist.add(vcpu);
+    public void register(Synchronizable vcpu){
+        slist.add(vcpu);
     }
 
     public void start(long delay, long period){
@@ -21,7 +21,7 @@ public class Vclock extends Timer {
             public void run() {
                 System.out.println("-----Tick#"+ timestamp +"-----");
                 timestamp++;
-                for(Vcpu i : vcpulist){
+                for(Synchronizable i : slist){
                     i.run();
                  }
                 }

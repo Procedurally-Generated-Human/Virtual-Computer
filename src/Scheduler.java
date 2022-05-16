@@ -1,4 +1,4 @@
-public class Scheduler {
+public class Scheduler{
 
     //public Task getNextTask(){
         // algorithm

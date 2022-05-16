@@ -1,4 +1,4 @@
-public class Vcpu {
+public class Vcpu extends Synchronizable{
 
     private Task CurrentTask;
     private int id;
