@@ -1,6 +1,5 @@
-public abstract class Synchronizable {
+public interface Synchronizable {
 
-    public abstract void run();
-
+     void run();
 
 }

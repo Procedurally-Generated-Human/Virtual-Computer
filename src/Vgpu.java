@@ -1,4 +1,4 @@
-public class Vgpu extends Synchronizable{
+public class Vgpu implements Synchronizable {
 
     private int id;
 
